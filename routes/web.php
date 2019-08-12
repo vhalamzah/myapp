@@ -16,6 +16,7 @@ Route::get('/login', function (){
 })->name('login');
 Route::get('/', function () {return view('welcome.index');});
 Route::get('/home', 'HomeController@verify_user_role');
+Route::get('/verify_user_role', 'HomeController@verify_user_role');
 Route::get('/logout', 'HomeController@logout');
 
 

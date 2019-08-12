@@ -37,18 +37,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link <?php if(basename($_SERVER['REQUEST_URI'])=='chef'){echo 'active';} ?>" href="{{url('chef')}}">DASHBOARD <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" <?php if(basename($_SERVER['REQUEST_URI'])=='profile'){echo 'active';} ?> href="{{url('profile')}}">MY PROFILE</a>
+            <a class="nav-item nav-link <?php if(stripos(basename($_SERVER['REQUEST_URI']),'chef')!==false){echo 'active';} ?>" href="{{url('chef')}}">DASHBOARD <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link <?php if(basename($_SERVER['REQUEST_URI'])=='profile'){echo 'active';} ?>" href="{{url('profile')}}">MY PROFILE</a>
 
-            <a class="nav-item nav-link" <?php if(basename($_SERVER['REQUEST_URI'])=='breakfast'){echo 'active';} ?> href="{{url('breakfast')}}">RECIPE</a>
-            <a class="nav-item nav-link" <?php if(basename($_SERVER['REQUEST_URI'])=='schedule'){echo 'active';} ?> href="#">SCHEDULE</a>
-            <a class="nav-item nav-link" <?php if(basename($_SERVER['REQUEST_URI'])=='account'){echo 'active';} ?> href="#">ACCOUNT</a>
+            <a class="nav-item nav-link <?php if(stripos(basename($_SERVER['REQUEST_URI']),'breakfast')!==false || stripos(basename($_SERVER['REQUEST_URI']),'lunch')!==false || stripos(basename($_SERVER['REQUEST_URI']),'dinner')!==false){echo 'active';} ?>" href="{{url('breakfast')}}">RECIPE</a>
+            <a class="nav-item nav-link <?php if(stripos(basename($_SERVER['REQUEST_URI']),'schedule')!==false){echo 'active';} ?>" href="#">SCHEDULE</a>
+            <a class="nav-item nav-link <?php if(basename($_SERVER['REQUEST_URI'])=='account'){echo 'active';} ?> " href="#">ACCOUNT</a>
 
             <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
         </div>
     </div>
-
-
 
     {{--<form class="form-inline">--}}
         {{--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--}}

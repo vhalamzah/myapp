@@ -50,8 +50,8 @@
 
 
 
-                        <button type="submit" class="btn btn-primary" id="loginform" hidden="">Submit</button>
-                        <a href="#" class="btn btn-primary" onclick="checkuser()">Submit me</a>
+                        <button type="submit" class="btn btn-primary" id="loginform" hidden="">Login</button>
+                        <a href="#" class="btn btn-primary" onclick="checkuser()">Login</a>
                     </form>
                 </div>
                 <div class="modal-footer">
